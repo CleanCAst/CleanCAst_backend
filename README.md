@@ -7,7 +7,9 @@ The CleanCAst project comprises two Github repositories:
 1. `CleanCAst_backend`: (this repo) which contains references to data sources and code used to produce carbon intensity model.
 2. `CleanCAst_frontend`: repo containing website content made using React, Reactstrap and create-react-app.
 
-## Data Sources
+## Data
+
+The project was executed in an AWS cloud environment, primarily using SageMaker for computing and S3 for storage. Consequently, the data folder contains complete files when file sizes are compatible with Github file size limits. In cases where the files are too large to be storge in their entireity on Github, we include samples only. All samples are noted with a `_SAMPLE` suffix at the end of the file name.
 
 We built CleanCAst using a data pipeline that aggregates data from the following sources:
 
@@ -15,7 +17,7 @@ We built CleanCAst using a data pipeline that aggregates data from the following
 * The [National Center for Atmospheric Research (NCAR)]() Research Data Archive supplied historical hourly weather forecasts for each latitude and longitude at increments of 0.25° via the NCEP GFS 0.25 Degree Global Forecast Grids Historical Archive ds084.1, which we matched to centroids of CEC resource regions below.
 * [California Energy Commission](https://www.energy.ca.gov/) supplied maps of [Solar Resource Areas and Wind Resource Areas](https://cecgis-caenergy.opendata.arcgis.com/maps/CAEnergy::solar-resource-areas-2022), as well as generating capacity of those regions. The geographic centroids of each solar region were calculated from shapefiles and capacity-weighted weather and solar radiation forecasts were incorporated into the pipeline.
 
-## Code
+## Notebooks
 
 All code configured to run on Amazon SageMaker Data Science 3.0 instance.
 
