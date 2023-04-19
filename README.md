@@ -21,11 +21,13 @@ We built CleanCAst using a data pipeline that aggregates data from the following
 
 All code configured to run on Amazon SageMaker Data Science 3.0 instance.
 
-* __PLACEHOLDER FOR PREPROCESSING NOTEBOOK__
+* `Aggregated_pipeline.ipynb`: main data pipeline that merges multiple data sources and solar forecasts and returns single csv file
+
+* `Carbon_intensity_energy_mix_plots.ipynb`: takes actual train-val-test data and model forecasts and uses it to create actual and forecast CO2 intensity plot against a stackplot background of energy sources
+
+* `Centroids_of_resource_areas.ipynb`: used to reduce CEC shapefiles of resource areas to centroid points (i.e. a single latitude and longitude) that were used for geographic sampling
 
 * `EDA_co2_intensity.ipynb`: exporatory data analysis of carbon intensity and covariates
-
-* __PLACEHOLDER FOR TOM'S SOLAR RADIATION NOTEBOOK__
 
 * `LightGBM_co2_96_hr_final_model.ipynb`: takes pre-processed data to produce 96 hour carbon intensity forecast
 
